@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="css/fix.css" rel="stylesheet" type="text/css">
+		<link href="css/map.css" rel="stylesheet" type="text/css">
+		<script src="js/main.js" defer="defer"></script>
+
+
+
+
+		<link rel="stylesheet" href="map_css/ol.css" media="all" type="text/css">			
+		<script src="map_js/jquery-2.1.1.min.js" defer="defer"></script>
+		<script src="map_js/ol-debug.js" defer="defer"></script>
+		
+		<link rel="stylesheet" href="map_css/main.css" media="all" type="text/css">
+		<script src="map_js/main.js" defer="defer"></script>
+
+		
+	</head>
+	<body >
+	<header>
+		<div id="header"></div>
+		<a href="index.html">
+		<div id="logotext" style="positio:absolute;top:10px">
+			<h2>Map Service</h2>
+		</div></a>
+		<button id="consulting" onclick="window.location = 'consulting.html'">Consulting</button>
+	</header>
+	<map>
+		<div id="info"></div>
+		<div id="map"></div>
+		
+		<nav id="layers" >
+				<ul>
+					<li><input type="radio" name="layer" value="mapquest" checked>MapQuest</li>
+					<li><input type="radio" name="layer" value="osm">OSM</li>
+					<li><input type="radio" name="layer" value="toner">Toner</li>
+					<li><input type="radio" name="layer" value="stamen">Stamen</li>
+				</ul>
+		</nav>
+		<button id="geolocat">Geolocat Me</button>
+
+	</map>	
+
+
+
+
+
+
+	<footer>
+		<div id="footer">
+			<a class="copyright" >&#169;2016 Copyright Map Service.</a>
+			<a class="createdby" >Created By Ravi Saini, Ruchika, Rachana, Nikhil, D.D. Charan & Mohit.</a>
+			<!--<forum><input></forum>-->
+		</div>
+	</footer>
+	</body>
+</html>
