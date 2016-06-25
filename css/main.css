@@ -1,0 +1,22 @@
+#searchbutton{
+	width: 70px;
+	height: 25px;
+	font-size: 15px;
+	border-radius:4px;
+}
+
+#search{
+	position:absolute;
+	top:50%;
+	left:40%;
+}
+
+#searchinput {
+	text-align: center;
+	font-size: 15px;
+	height: 20px;
+}
+
+button:hover{background-color:#ccc7c7;}
+
+
