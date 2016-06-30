@@ -7,7 +7,7 @@ This error come in <a href="https://ravirajpurohit.github.io/Error/map_js/ol-deb
 
 <b>The Error is:</b><br />
 "Uncaught TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'."<br />
-<b>Note:</b> You also can <a href="https://ravirajpurohit.github.io/Error" taget="_blank">Preview</a> these html files. <br />
+<b>Note:</b> You can <a href="https://ravirajpurohit.github.io/Error" taget="_blank">Preview</a> these html files. <br />
 Please sir help us.
 
 Thank you
