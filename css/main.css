@@ -19,4 +19,13 @@
 
 button:hover{background-color:#ccc7c7;}
 
+body{
+    	background-color: #eee;
+}
 
+#content{
+	position:absolute;
+	color:#abc;
+	top:75px;
+	background-color: #123456;
+}
