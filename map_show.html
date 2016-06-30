@@ -4,17 +4,16 @@
 		<title>Map View</title>
 		<link href="css/fix.css" rel="stylesheet" type="text/css">
 		<link href="css/map.css" rel="stylesheet" type="text/css">
-		<script src="js/main.js" defer="defer"></script>
-
-
-
-
+		
 		<link rel="stylesheet" href="map_css/ol.css" media="all" type="text/css">			
 		<script src="map_js/jquery-2.1.1.min.js" defer="defer"></script>
 		<script src="map_js/ol-debug.js" defer="defer"></script>
 		
 		<link rel="stylesheet" href="map_css/main.css" media="all" type="text/css">
 		<script src="map_js/main.js" defer="defer"></script>
+
+
+		
 
 		
 	</head>
@@ -30,16 +29,21 @@
 	<map>
 		<div id="info"></div>
 		<div id="map"></div>
-		
+		<!--div id="popup" class="ol-popup">
+      			<a href="#" id="popup-closer" class="ol-popup-closer"></a>
+      			<div id="popup-content"></div>
+    		</div-->
 		<nav id="layers" >
 				<ul>
-					<li><input type="radio" name="layer" value="mapquest" checked>MapQuest</li>
+					<li><input type="radio" name="layer" value="toner" checked>Toner</li>
+					<li><input type="radio" name="layer" value="mapquest">MapQuest</li>
 					<li><input type="radio" name="layer" value="osm">OSM</li>
-					<li><input type="radio" name="layer" value="toner">Toner</li>
+					<li><input type="radio" name="layer" value="TileJSON">TileJSON</li>
 					<li><input type="radio" name="layer" value="stamen">Stamen</li>
 				</ul>
 		</nav>
 		<button id="geolocat">Geolocat Me</button>
+		<button id="getisro">RRSC-W Location</button>
 
 	</map>	
 
@@ -50,9 +54,9 @@
 
 	<footer>
 		<div id="footer">
-			<a class="copyright" >&#169;2016 Copyright Map Service.</a>
+			<a class="copyright" ><!--&#169;2016 Copyright Map Service-->.</a>
 			<a class="createdby" >Created By Ravi Saini, Ruchika, Rachana, Nikhil, D.D. Charan & Mohit.</a>
-			<!--<forum><input></forum>-->
+			
 		</div>
 	</footer>
 	</body>
