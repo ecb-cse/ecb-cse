@@ -9,7 +9,7 @@ $(document).ready(function(){
 			source: new ol.source.MapQuest ({
 			layer: 'sat'
 		}),
-		visible: true,
+		visible: false,
 		name: 'mapquest'
     });
 	var osm = new ol.layer.Tile({
@@ -21,7 +21,7 @@ $(document).ready(function(){
 		source: new ol.source.Stamen({
 			layer: 'toner'
 		}),
-		visible: false,
+		visible: true,
 		name: 'toner'
     });
 	var stamen = new ol.layer.Group({
@@ -40,6 +40,16 @@ $(document).ready(function(){
 			visible: false,
 			name: 'stamen'
     });
+	
+	var TileJSON = new ol.layer.Tile({
+            source: new ol.source.TileJSON({
+              url: 'http://api.tiles.mapbox.com/v3/' +
+                  'mapbox.natural-earth-hypso-bathy.json',
+              crossOrigin: 'anonymous'
+            }),
+	visible: false,
+		name: 'TileJSON'
+          })
 	var map = new ol.Map({
         target: 'map',
         conrols: ol.control.defaults().extend([
@@ -47,7 +57,8 @@ $(document).ready(function(){
 			new ol.control.ZoomSlider()
 		]),
 		renderer: 'canvas',
-		layers: [mapquest, osm, toner, stamen],
+		layers: [mapquest, osm, toner, stamen, TileJSON],
+		//overlays: [overlay],
 		view: view
     });
 	
@@ -59,4 +70,93 @@ $(document).ready(function(){
 			e.setVisible(name == layer);
 		});
 	});
+
+	var geolocation = new ol.Geolocation({
+		projection: view.getProjection(),
+		tracking: true
+	});
+
+	var style = new ol.style.Style({
+	    image: new ol.style.Circle({
+	    	radius: 7,
+	      	stroke: new ol.style.Stroke({
+		      	color: '#3971AA',
+		      	width: 3
+	    	}),
+	      	fill: new ol.style.Fill({
+	        	color: 'rgba(18, 52, 86, .3)'
+	      	})
+	    })
+  	});
+
+	$('#geolocat').click(function() {
+		var position = geolocation.getPosition();
+
+		var point = new ol.layer.Vector({
+			source: new ol.source.Vector({
+				features: [
+					new ol.Feature({
+						geometry: new ol.geom.Point(position),
+						text: 'My Location <br>'
+					})
+				]
+			}),
+			style: style
+		});
+
+		map.addLayer(point);
+
+		view.setCenter(position);
+		view.setResolution(2.388657133911758);
+		return false;
+
+	});
+	
+	$('#getisro').click(function() {
+		var rrscw = ol.proj.fromLonLat([73.022814, 26.2050944]);
+
+		var point = new ol.layer.Vector({
+			source: new ol.source.Vector({
+				features: [
+					new ol.Feature({
+						geometry: new ol.geom.Point(rrscw),
+						text: 'RRSC-W, Jodhpur <br>'
+					})
+				]
+			}),
+			style: style
+		});
+
+		map.addLayer(point);
+
+		view.setCenter(rrscw);
+		view.setResolution(2.388657133911758);
+		return false;
+
+	});
+
+	
+	
+	var overlay = new ol.Overlay({
+        	element: $('popup'),
+        	autoPan: true,
+        	autoPanAnimation: {
+          		duration: 50
+        	}
+      	});
+	$('popup-closer').onclick(function() {
+        	overlay.setPosition(undefined);
+        	$('popup-closer').blur();
+        	return false;
+      	});
+	map.on('singleclick', function(evt) {
+        	var coordinate = evt.coordinate;
+        	var hdms = ol.coordinate.toStringHDMS(ol.proj.transform(
+            		coordinate, 'EPSG:3857', 'EPSG:4326'));
+
+        	$('popup-content').innerHTML = '<p>You clicked here:</p><code>' + hdms +
+            		'</code>';
+        	overlay.setPosition(coordinate);
+      	});
+
 });
