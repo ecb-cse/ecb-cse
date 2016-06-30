@@ -1,162 +1,73 @@
-$(document).ready(function(){
-	var view = new ol.View({
-		center: ol.proj.fromLonLat([78.9629, 23.3]),
-		zoom: 4.5,
-		maxZoom : 18,
-		minZoom : 2
-    })
-	var mapquest = new ol.layer.Tile({
-			source: new ol.source.MapQuest ({
-			layer: 'sat'
-		}),
-		visible: false,
-		name: 'mapquest'
-    });
-	var osm = new ol.layer.Tile({
-			source: new ol.source.OSM (),
-			visible: false,
-			name: 'osm'
-    });
-	var toner = new ol.layer.Tile({
-		source: new ol.source.Stamen({
-			layer: 'toner'
-		}),
-		visible: true,
-		name: 'toner'
-    });
-	var stamen = new ol.layer.Group({
-			layers: [
-				new ol.layer.Tile({
-					source: new ol.source.Stamen({
-						layer: 'watercolor'
-					})
-				}),
-				new ol.layer.Tile({
-					source: new ol.source.Stamen({
-						layer: 'terrain-labels'
-					})
-				})
-			],
-			visible: false,
-			name: 'stamen'
-    });
-	
-	var TileJSON = new ol.layer.Tile({
-            source: new ol.source.TileJSON({
-              url: 'http://api.tiles.mapbox.com/v3/' +
-                  'mapbox.natural-earth-hypso-bathy.json',
-              crossOrigin: 'anonymous'
-            }),
-	visible: false,
-		name: 'TileJSON'
-          })
-	var map = new ol.Map({
-        target: 'map',
-        conrols: ol.control.defaults().extend([
-			new ol.control.ScaleLine(),
-			new ol.control.ZoomSlider()
-		]),
-		renderer: 'canvas',
-		layers: [mapquest, osm, toner, stamen, TileJSON],
-		//overlays: [overlay],
-		view: view
-    });
-	
-	$('#layers input[type=radio]').change(function(){
-		var layer = $(this).val();
-		
-		map.getLayers().getArray().forEach(function(e){
-			var name = e.get('name');
-			e.setVisible(name == layer);
-		});
-	});
+#map{
+	position:absolute;
+	top:60px;
+	left:0px;
+	height:550px;
+	width:100%;
+}
 
-	var geolocation = new ol.Geolocation({
-		projection: view.getProjection(),
-		tracking: true
-	});
-
-	var style = new ol.style.Style({
-	    image: new ol.style.Circle({
-	    	radius: 7,
-	      	stroke: new ol.style.Stroke({
-		      	color: '#3971AA',
-		      	width: 3
-	    	}),
-	      	fill: new ol.style.Fill({
-	        	color: 'rgba(18, 52, 86, .3)'
-	      	})
-	    })
-  	});
-
-	$('#geolocat').click(function() {
-		var position = geolocation.getPosition();
-
-		var point = new ol.layer.Vector({
-			source: new ol.source.Vector({
-				features: [
-					new ol.Feature({
-						geometry: new ol.geom.Point(position),
-						text: 'My Location <br>'
-					})
-				]
-			}),
-			style: style
-		});
-
-		map.addLayer(point);
-
-		view.setCenter(position);
-		view.setResolution(2.388657133911758);
-		return false;
-
-	});
-	
-	$('#getisro').click(function() {
-		var rrscw = ol.proj.fromLonLat([73.022814, 26.2050944]);
-
-		var point = new ol.layer.Vector({
-			source: new ol.source.Vector({
-				features: [
-					new ol.Feature({
-						geometry: new ol.geom.Point(rrscw),
-						text: 'RRSC-W, Jodhpur <br>'
-					})
-				]
-			}),
-			style: style
-		});
-
-		map.addLayer(point);
-
-		view.setCenter(rrscw);
-		view.setResolution(2.388657133911758);
-		return false;
-
-	});
-
-	
-	
-	var overlay = new ol.Overlay({
-        	element: $('popup'),
-        	autoPan: true,
-        	autoPanAnimation: {
-          		duration: 50
-        	}
-      	});
-	$('popup-closer').onclick(function() {
-        	overlay.setPosition(undefined);
-        	$('popup-closer').blur();
-        	return false;
-      	});
-	map.on('singleclick', function(evt) {
-        	var coordinate = evt.coordinate;
-        	var hdms = ol.coordinate.toStringHDMS(ol.proj.transform(
-            		coordinate, 'EPSG:3857', 'EPSG:4326'));
-
-        	$('popup-content').innerHTML = '<p>You clicked here:</p><code>' + hdms +
-            		'</code>';
-        	overlay.setPosition(coordinate);
-      	});
-
-});
+#geolocat{
+	position:absolute;
+	top:612px;left:5px;
+	font-size: 15px;
+	border-radius:4px;
+	background-color:#123456;
+	border: 1px solid #3f65c0;
+	color:#b2c3ea;
+	padding: 5px 12px;
+}
+#geolocat:hover{background-color:black;color:white}
+li:hover{background-color:black;color:white}
+#getisro{
+	position:absolute;
+	top:612px;left:130px;
+	font-size: 15px;
+	border-radius:4px;
+	background-color:#123456;
+	border: 1px solid #3f65c0;
+	color:#b2c3ea;
+	padding: 5px 12px;
+}
+#getisro:hover{background-color:black;color:white}
+.ol-popup {
+	position: absolute;
+	background-color: white;
+	-webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+	filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+	padding: 15px;
+	border-radius: 10px;
+	border: 1px solid #cccccc;
+	bottom: 12px;
+	left: -50px;
+	min-width: 280px;
+}
+.ol-popup:after, .ol-popup:before {
+	top: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.ol-popup:after {
+	border-top-color: white;
+	border-width: 10px;
+	left: 48px;
+	margin-left: -10px;
+}
+.ol-popup:before {
+	border-top-color: #cccccc;
+	border-width: 11px;
+	left: 48px;
+	margin-left: -11px;
+}
+.ol-popup-closer {
+	text-decoration: none;
+	position: absolute;
+	top: 2px;
+	right: 8px;
+}
+.ol-popup-closer:after {
+	content: "\00d7";
+}
