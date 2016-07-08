@@ -135,28 +135,4 @@ $(document).ready(function(){
 
 	});
 
-	
-	
-	var overlay = new ol.Overlay({
-        	element: $('popup'),
-        	autoPan: true,
-        	autoPanAnimation: {
-          		duration: 50
-        	}
-      	});
-	$('popup-closer').onclick(function() {
-        	overlay.setPosition(undefined);
-        	$('popup-closer').blur();
-        	return false;
-      	});
-	map.on('singleclick', function(evt) {
-        	var coordinate = evt.coordinate;
-        	var hdms = ol.coordinate.toStringHDMS(ol.proj.transform(
-            		coordinate, 'EPSG:3857', 'EPSG:4326'));
-
-        	$('popup-content').innerHTML = '<p>You clicked here:</p><code>' + hdms +
-            		'</code>';
-        	overlay.setPosition(coordinate);
-      	});
-
 });
