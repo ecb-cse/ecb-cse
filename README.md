@@ -2,12 +2,9 @@
 Repository for Error solution
 
 
-Sir this is our web application. We try to show pop-up but <a href="https://github.com/RaviRajpurohit/Error/blob/gh-pages/map_show.html"> map_show.html</a> file give an error related to popup <b>Overlay.getID</b>
-This error come in <a href="https://ravirajpurohit.github.io/Error/map_js/ol-debug.js"> ol-debug.js</a> on overlay.
+Sir this is our web application. We try to show pop-up in openlayer3 but we can't do this. But we understand the openlayer2 and generate some <a href="https://ravirajpurohit.github.io/Error/map.html">pop-up on lo2 map.</a>
 
-<b>The Error is:</b><br />
-"Uncaught TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'."<br />
-<b>Note:</b> You can <a href="https://ravirajpurohit.github.io/Error" taget="_blank">Preview</a> these html files. <br />
-Please sir help us.
+Please visit our project map, To follow belove link
+<a href="https://ravirajpurohit.github.io/Error">ECB-CSE Project</a>
 
 Thank you
