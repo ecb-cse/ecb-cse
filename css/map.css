@@ -8,7 +8,7 @@
 
 #geolocat{
 	position:absolute;
-	top:612px;left:5px;
+	top:615px;left:5px;
 	font-size: 15px;
 	border-radius:4px;
 	background-color:#123456;
@@ -20,7 +20,7 @@
 li:hover{background-color:black;color:white}
 #getisro{
 	position:absolute;
-	top:612px;left:130px;
+	top:615px;left:130px;
 	font-size: 15px;
 	border-radius:4px;
 	background-color:#123456;
