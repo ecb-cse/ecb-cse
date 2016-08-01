@@ -1,0 +1,40 @@
+h2 {
+	content: url.jpg);
+	color: #b2c3ea;
+}
+a:hover{color:black}
+
+header{
+	background-color:#123456;
+	position:absolute;
+	top: 0px;
+	left:0px;
+	height:60px;
+	width:100%;
+	border-bottom: 5px ridge;
+}
+#logotext:hover{opacity: .6;title:home}
+#logotext{
+	position:absolute;
+	top:10px;
+	left:5px;
+	font-size:larger;
+}
+
+footer{
+	border-top: 5px ridge;
+	background-color:#123456;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	color: #b2c3ea;
+}
+
+.createdby{
+	right:5px;
+	position:absolute;
+}
+
+
+

@@ -1,0 +1,51 @@
+body{
+    	background-color: #ddd;
+}
+
+
+#isro{
+	position:absolute;
+	top:65px;
+	left:45%;
+	height:110px;
+	width:auto;
+}
+#rrsc{
+	position:absolute;
+	top:180px;
+	left:35%;
+	height:auto;
+	width:400px;
+}
+#left{
+	position:absolute;
+	top:280px;
+	left:5%;
+	border-spacing:10px;
+	padding:10px;
+	
+	
+}
+#right{
+	position:absolute;
+	top:280px;
+	right:5%;
+	border-spacing:10px;
+	padding:10px;
+	
+	
+}
+button{
+	/*position:absolute;
+	top:615px;left:290px;*/
+	font-size: 15px;
+	width:180px;
+	border-radius:4px;
+	background-color:#123456;
+	border: 1px solid #3f65c0;
+	color:#b2c3ea;
+	padding: 5px 12px;
+}
+button:hover{background-color:black;color:white}
+
+

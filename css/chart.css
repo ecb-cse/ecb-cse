@@ -1,0 +1,39 @@
+#map{
+	position:absolute;
+	top:60px;
+	left:0px;
+	height:85%;
+	width:60%;
+}
+
+
+
+#chartj{
+	position:absolute;
+	top:60px;
+	left:60%;
+	
+	width:40%;
+	
+}
+#chartd{
+	position:absolute;
+	bottom:30px;
+	left:60%;
+	
+	width:40%;
+	
+}
+.marker {
+	width: 15px;
+    	height: 15px;
+    	border: 2px ridge #123456;
+    	border-radius: 7px;
+    	background-color: #b2c3ea;
+    	opacity: .8;
+}
+.marker:hover {
+	background-color: black;
+    	opacity: 1;
+}
+
