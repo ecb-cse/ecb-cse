@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Find Your Location</title>
+		<link href="css/fix.css" rel="stylesheet" type="text/css">
+		<link href="css/find_location.css" rel="stylesheet" type="text/css">
+		
+		
+		<link rel="stylesheet" href="css/ol.css" media="all" type="text/css">			
+		<script src="js/jquery-2.1.1.min.js" defer="defer"></script>
+		<script src="js/ol-debug.js" defer="defer"></script>
+		
+		<link rel="stylesheet" href="css/main.css" media="all" type="text/css">
+		<script src="js/main.js" defer="defer"></script>
+		
+	</head>
+	<body >
+		<header>
+		
+			<a href="index.html">
+			<div id="logotext" >
+				<h2 title="HOME">Map Service</h2>
+			</div></a>
+		
+		</header>
+		<map>
+		
+			<div id="map" ></div>
+		
+			<nav id="layers" >
+					<ul>
+						<li title="Toner"><input type="radio" name="layer" value="toner"  checked>Toner</li>
+						<li title="MapQuest"><input type="radio" name="layer" value="mapquest" >MapQuest</li>
+						<li title="OSM"><input type="radio" name="layer" value="osm" >OSM</li>
+						<li title="TileJSON"><input type="radio" name="layer" value="TileJSON" >TileJSON</li>
+						<li title="Stamen"><input type="radio" name="layer" value="stamen" >Stamen</li>
+					</ul>
+			</nav>
+			<button id="geolocat" title="Find your location">Geolocat Me</button>
+			<button id="getisro" title="Regional Remote Sensing Centre-West">RRSC-W Location</button>
+		</map>	
+
+		<footer>
+		
+				<a class="copyright" >&#169;2016 Copyright Map Service.</a>
+				<a class="createdby" >Created By Ravi Rajpurohit, Ravi Saini, Ruchika, Rachana, Nikhil, D.D. Charan & Mohit.</a>
+			
+		
+		</footer>
+	</body>
+</html>
