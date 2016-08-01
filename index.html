@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link href="css/main.css" rel="stylesheet" type="text/css">
+		<title>HOME</title>
 		<link href="css/fix.css" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="css/index.css" media="all" type="text/css">
 		
 	</head>
-	<title>Map Service</title>
-	<body onload="alert('Your welcome in our project')">
-
-	<header>
-		<div id="header"></div>
-		<a href="index.html">
-		<div id="logotext" style="top:-10px">
-			<h2>Map Service</h2>
-		</div></a>
-		<button id="consulting" onclick="window.location = 'consulting.html'">Consulting</button>
-	</header>
-		<p id="content">Thank you to visit<br /> We are work on this page so you cant search anything<br /> Sorry, Please visit next 				map view page. To go there please click on search button</p>
-		<div id="search">
-			<input id="searchinput" placeholder="Enter keyword here" type="text">
-			<button id="searchbutton" onclick="window.location = 'map_show.html'">Search</button>
-		</div>
-
-	<footer>
-		<div id="footer">
-			<a class="copyright" ><!--&#169;2016 Copyright Map Service-->.</a>
-			<a class="createdby" >Created By Ravi Saini, Ruchika, Rachana, Nikhil, D.D. Charan & Mohit.</a>
-		</div>
-	</footer>
+	<body >
+		<header>
+	
+			<a  href="index.html" >
+				<div id="logotext" style="position:absolute;top:-10px;">
+					<h2 title="Home" >Map Service</h2>
+				</div>
+			</a>
+	
+		</header>
+		<section>
+			<img id="isro"src="img/isro.png">
+			<img id="rrsc"src="img/rrsc.png">
+			<table id="left">
+				<tr><td><button id="popup" onclick="window.location = 'map_layer.html'">Show Map layer</button></td></tr>
+				<tr><td><button id="popup" onclick="window.location = 'popup.html'">Generate Pop-up</button></td></tr>
+				<tr><td><button id="chart" onclick="window.location = 'chart.html'">Temperature Chart</button></td></tr>
+			</table>
+			<table id="right">
+				<tr><td><button id="popup" onclick="window.location = 'find_location.html'">Find your location</button></td></tr>
+				<tr><td><button id="places" onclick="window.location = 'search_places.html'">Search Places</button></td></tr>
+				<tr><td><button id="places" onclick="window.location = '#'">Weather Chart</button></td></tr>
+			</table>
+		</section>
+		<footer>
+		
+			<a class="copyright" >&#169;2016 Copyright Map Service.</a>
+			<a class="createdby">Created By Ravi Rajpurohit, Ravi Saini, Ruchika, Rachana, Nikhil, D.D. Charan & Mohit.</a>
+		
+		</footer>
 	</body>
 </html>
