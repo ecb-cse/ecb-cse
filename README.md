@@ -31,7 +31,7 @@ After these step We move forward with chart.js. We collected the Temperature and
 
 
 Please visit our project map, To follow belove link
-<a href="https://ravirajpurohit.github.io/Error">ECB-CSE Project</a>
+<a href="https://ecb-cse.github.io/ecb-cse">ECB-CSE Project</a>
 
 <b>Thank you</br></b>
 <a href="https://github.com/RaviRajpurohit">Ravi Rajpurohit</a></br>
