@@ -33,11 +33,11 @@ After these step We move forward with chart.js. We collected the Temperature and
 Please visit our project map, To follow belove link
 <a href="https://ravirajpurohit.github.io/Error">ECB-CSE Project</a>
 
-Thank you
-<a herf="https://github.com/RaviRajpurohit">Ravi Rajpurohit</a></br>
-<a herf="https://www.facebook.com/ravi4255">Ravi Saini</a></br>
-<a herf="https://www.facebook.com/profile.php?id=100007113045423&fref=ts">Ruchika Kachhawa</a></br>
-<a herf="https://www.facebook.com/rachana.bahety.37?fref=ts">Rachana Bahety</a></br>
-<a herf="https://www.facebook.com/nikhilsomaniecb">Nikhil Somani</a></br>
-<a herf="https://www.facebook.com/ddcharandasoori">Dungar Dan Charan</a></br>
-<a herf="https://www.facebook.com/SMohitjain94">Mohit Bohara</a></br>
+<b>Thank you</br></b>
+<a href="https://github.com/RaviRajpurohit">Ravi Rajpurohit</a></br>
+<a href="https://www.facebook.com/ravi4255">Ravi Saini</a></br>
+<a href="https://www.facebook.com/profile.php?id=100007113045423&fref=ts">Ruchika Kachhawa</a></br>
+<a href="https://www.facebook.com/rachana.bahety.37?fref=ts">Rachana Bahety</a></br>
+<a href="https://www.facebook.com/nikhilsomaniecb">Nikhil Somani</a></br>
+<a href="https://www.facebook.com/ddcharandasoori">Dungar Dan Charan</a></br>
+<a href="https://www.facebook.com/SMohitjain94">Mohit Bohara</a></br>
