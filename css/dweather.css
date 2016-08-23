@@ -1,0 +1,28 @@
+#map {
+  	position:absolute;
+	top:60px;
+	left:0px;
+	height:85%;
+	width:60%;
+	
+}
+#popup {
+  	padding-bottom: 45px;
+	width: 100px;
+}
+.popover-content {
+    padding: 9px 14px;
+    width: 200px;
+    
+}
+button{
+	/*background-color:#123456;
+	font-size: 15px;
+	color:#b2c3ea;*/
+	border-radius:4px;
+	background-color: RGBA(37, 71, 105, 0.48);/*#123456;*/
+	border: 1px solid #040b1a;#3f65c0;
+	color:white;#040b1a;/*#b2c3ea;*/
+	padding: 5px 12px;
+}button:hover{background-color:black;color:white}
+
