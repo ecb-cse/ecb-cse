@@ -2,7 +2,7 @@ $(document).ready(function(){
 	var iconStyle;
 	var iconFeature;
 	$.ajax({
-		url: "https://github.com/ecb-cse/ecb-cse/blob/gh-pages/latlong.php",
+		url: "https://localhost/latlong.php",
 		method: "GET",
 		success: function(data) {
 			
