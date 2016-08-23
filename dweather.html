@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dynamic Weather Data</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.7.0/ol.css" type="text/css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.7.0/ol.js"></script>
+
+
+		<link href="css/fix.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/popup.css" type="text/css">
+
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.js"></script>
+		<script type="text/javascript" src="http://hammerjs.github.io/dist/hammer.min.js"></script>
+		<script type="text/javascript" src="js/Chart.Zoom.js"></script>
+
+		<style type="text/css">
+			#chart-container {
+				position:absolute;
+				top:60px;
+				left:60%;
+
+				width:40%;
+			}
+		</style>
+	</head>
+	<body>
+		<header >
+	
+			<a href="index.html" title="HOME">
+			<div id="logotext" style="position:absolute;top:-10px;left:5px;font-size:larger;">
+				<h2 style="color: #b2c3ea;">Map Service</h2>
+			</div></a>
+	
+		</header>
+	 
+	    	<div id="map" class="map"><div id="popup"></div></div>
+		<script src="js/dpopup.js"></script>
+
+		<div id="chart-container">
+			<canvas id="mycanvas"></canvas>
+		</div>
+
+		<footer >
+	
+				<d class="copyright" >&#169;2016 Copyright Map Service.</d>
+				<d class="createdby" >Created By Ravi Rajpurohit, Ravi Saini, Ruchika, Rachana, Nikhil, D.D. Charan & Mohit.</d>
+		
+	
+		</footer>
+	</body>
+</html>
